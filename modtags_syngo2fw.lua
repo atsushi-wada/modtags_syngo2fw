@@ -44,7 +44,7 @@ function generateFwDataPath(subjectLabel, programLabel)
     local groupLabel = 'unknown'
     local projectLabel = 'unknown'
     if #tokens >= 2 then
-        groupLabel = tokens[1] .. '_' .. tokens[2]
+        groupLabel = string.lower(tokens[1] .. '_' .. tokens[2])
         if #tokens < 3 then
             projectLabel =  'default'
         else
